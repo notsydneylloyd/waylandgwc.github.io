@@ -1,5 +1,77 @@
 <html>
-  <body>
-    <span style="color:orange"> Watch this web page change!!!!</span>
+  <head>
+  <script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.0
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" onLoad="MM_preloadImages('greenland.gif','alaska.gif','continental_us.gif','canada.gif','mexico.gif')">
+<h3>Pass the mouse pointer over regions within a map to display different images. 
+<a href="example_5_html.htm">View source.</a></h3>
+<table>
+<tr> 
+<td> <IMG SRC="north_america.gif" USEMAP="#north_america_map" NAME="north_america"
+alt="North America" width="185" height="242"> 
+<MAP NAME="north_america_map"> 
+<area shape="poly" coords="50,63,63,45,59,35,44,33,12,50" HREF="#"
+alt="Alaska" title="Alaska"
+onMouseOut="MM_swapImgRestore()"
+onMouseOver="MM_swapImage('north_america','','alaska.gif',1)">
+<area shape=poly coords="113,8,144,22,152,60,107,31" HREF="#"
+alt="Greenland" title="Greenland"
+onMouseOut="MM_swapImgRestore()"
+onMouseOver="MM_swapImage('north_america','','greenland.gif',1)">
+<area shape=poly coords="62,45,107,23,162,86,148,104,143,99,125,111,115,100,105,105,55,96,49,64" HREF="#"
+alt="Canada" title="Canada"
+onMouseOut="MM_swapImgRestore()"
+onMouseOver="MM_swapImage('north_america','','canada.gif',1)">
+<area shape=poly coords="60,96,105,105,115,100,125,111,143,99,134,153,97,153,62,137,50,118" HREF="#"
+alt="Contigous 48 states" title="Contigous 48 states"
+onMouseOut="MM_swapImgRestore()"
+onMouseOver="MM_swapImage('north_america','','continental_us.gif',1)">
+<area shape=poly coords="61,135,122,165,109,183,65,159,60,136" HREF="#" 
+alt="Mexico" title="Mexico"
+onMouseOut="MM_swapImgRestore()"
+onMouseOver="MM_swapImage('north_america','','mexico.gif',1)">
+</MAP>
+</td>
+<td> 
+<p>Client-side image maps store the hyperlink information in the HTML document, 
+not in a separate map file as do server-side image maps. When the user 
+clicks a hotspot in the image, the associated URL is sent directly to 
+the server. This makes client-side image maps faster than server-side 
+image maps, because the server does not need to interpret where the user 
+clicked. Client-side image maps are supported by Netscape Navigator 2.0 
+and later, NCSA Mosaic 2.1 and 3.0, and all versions of Microsoft Internet 
+Explorer.</p>
+</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+<p><a href="JavaScriptDemo.htm">Return to Having Fun with JavaScript</a>.</p>
+
   </body>
 </html>
